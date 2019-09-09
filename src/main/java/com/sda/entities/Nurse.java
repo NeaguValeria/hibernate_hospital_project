@@ -11,6 +11,7 @@ public class Nurse {
     @Id
     @GenericGenerator(name="gen" , strategy="increment")
     @GeneratedValue(generator="gen")
+    @Column(name="employeeid")
     private  Integer employee;
     @Column(name= "name_of_nurse")
     private String name;

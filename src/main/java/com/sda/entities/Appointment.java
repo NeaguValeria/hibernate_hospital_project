@@ -2,10 +2,7 @@ package com.sda.entities;
 
 import org.hibernate.annotations.GenericGenerator;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.sql.Date;
 
 @Entity
@@ -15,9 +12,8 @@ public class Appointment {
     @Id
     @GenericGenerator(name="gen" , strategy="increment")
     @GeneratedValue(generator="gen")
-    private Integer appointment;
-
-
+    @Column(name="appointmentid")
+    private Integer id;
     private  Patient patient;
     private Nurse prepnurse;
     private Physician physician;

@@ -12,7 +12,8 @@ public class Stay {
     @Id
     @GenericGenerator(name="gen" , strategy="increment")
     @GeneratedValue(generator="gen")
-    private Integer stay;
+    @Column(name="stayid")
+    private Integer id;
     private Patient patient;
     private Room room;
     @Column(name= "start_time")

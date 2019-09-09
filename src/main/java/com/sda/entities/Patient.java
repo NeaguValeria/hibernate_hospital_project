@@ -11,6 +11,7 @@ public class Patient {
     @Id
     @GenericGenerator(name="gen" , strategy="increment")
     @GeneratedValue(generator="gen")
+    @Column(name = "ssn")
     private Integer ssn;
     @Column(name= "name_of_patient")
     private String name;

@@ -11,6 +11,7 @@ public class Procedure {
     @Id
     @GenericGenerator(name="gen" , strategy="increment")
     @GeneratedValue(generator="gen")
+    @Column(name = "code_of_procedures")
     private Integer code;
     @Column(name= "name_of_procedures")
     private String name;
